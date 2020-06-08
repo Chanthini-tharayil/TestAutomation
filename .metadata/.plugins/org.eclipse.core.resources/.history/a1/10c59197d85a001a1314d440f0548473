@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
+public class Count {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 int[] height = new int[]{1, 1, 4, 2, 1, 3};
+	        //int count = heightChecker.heightChecker(in);
+	        int count = 0;
+	        if (height == null || height.length == 0) 
+                System.out.println(count); 
+            int len = height.length;
+            int[] Array1 = new int[height.length];
+            System.arraycopy(height, 0, Array1, 0, len);
+            Arrays.sort(Array1);
+            for (int i = 0; i < len; i++) {
+                if (Array1[i] != height[i])
+                    count++;
+            }
+	   
+	        /*if (in == null || in.length == 0) 
+	        	System.out.println(count); 
+	        int len = in.length;
+	        int[] Array1 = new int[in.length];
+	        System.arraycopy(in, 0, Array1, 0, len);
+	        Arrays.sort(Array1);
+	        for (int i = 0; i < len; i++) {
+	            if (Array1[i] != in[i])
+	                count++;
+	        }
+	    */
+	      System.out.println(count);    
+	}
+	
+
+}

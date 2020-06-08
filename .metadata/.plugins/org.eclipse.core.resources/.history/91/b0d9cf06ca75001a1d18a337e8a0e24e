@@ -1,0 +1,14 @@
+package prep;
+
+public class bigestnumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int[] a={54, 546, 548, 60};
+StringBuilder s=new StringBuilder();
+for(int i=0;i<a.length;i++)
+	s.append(a[i]);
+System.out.println(s.toString());
+	}
+
+}

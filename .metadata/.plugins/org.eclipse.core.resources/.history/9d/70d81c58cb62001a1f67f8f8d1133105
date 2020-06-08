@@ -1,0 +1,26 @@
+package Hackerrank;
+
+public class Valleycount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char[] hike= {'D','D','U','U','U','D','D','D','U','D','U','U'};
+		  int count = 0;
+	        int altitude = 0;
+	        
+	        for(char c : hike) {
+	            // Step up
+	            if(c == 'U') {
+	                if(altitude == -1) {
+	                    count++;
+	                }
+	                altitude++;
+	            }
+	            // Step down
+	            else {
+	                altitude--;
+	            }
+	        }
+	}
+
+}

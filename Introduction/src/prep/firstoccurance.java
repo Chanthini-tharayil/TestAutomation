@@ -1,0 +1,29 @@
+package prep;
+
+import java.util.LinkedHashSet;
+
+public class firstoccurance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a={1, 0, -1,-2,-1,0,1,2,3};
+		 int i = 0; 
+		 int x=-2;
+		    while (i<a.length) 
+		    { 
+		        // If x is found at index i 
+		        if (a[i] == x) 
+		        {
+		            System.out.println("element found at:"+i);
+		            break;
+		        }
+		  
+		        // Jump the difference between current 
+		        // array element and x 
+		        i = i + Math.abs(a[i]-x); 
+		    } 
+		
+
+	}
+
+}

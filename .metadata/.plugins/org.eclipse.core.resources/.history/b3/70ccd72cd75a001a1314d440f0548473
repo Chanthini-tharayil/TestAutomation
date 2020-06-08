@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
+public class Count {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		double d = 10.0 / -0;
+		  if(d == Double.POSITIVE_INFINITY)
+		    System.out.println("Positive infinity");
+		  else
+		    System.out.println("Negative infinity");
+	    
+	          
+	}
+
+}

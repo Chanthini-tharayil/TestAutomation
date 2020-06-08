@@ -1,0 +1,38 @@
+package Hackerrank;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class array {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a= {1 ,2, 3 ,4, 5};
+		int d=2;
+	       int len=a.length;
+	       List<Integer> m = new ArrayList<Integer>();
+	       
+	   //   System.out.println(len);
+	       for(int i=0;i<=d;i++)
+	       {
+	           m.add(a[i]);
+	           a[i]=a[i+1];
+	        //   a[len-1]=temp;
+
+	           
+	       }
+	       int j=d;
+for( int i=0;i<m.size()&&j<a.length;i++,j++)
+{
+	
+	a[j+1]=m.get(i);
+//	j++;
+}
+		
+for(int i=0;i<a.length;i++)
+{
+	System.out.println(a[i]);
+}
+	}
+
+}

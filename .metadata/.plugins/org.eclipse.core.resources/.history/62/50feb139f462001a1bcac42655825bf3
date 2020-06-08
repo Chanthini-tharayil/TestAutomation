@@ -1,0 +1,60 @@
+package Hackerrank;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class hackerrankstring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String test="hacknk";
+		String test1="hackerrank";
+		char[] y=test.toCharArray();
+		Boolean tets=true;
+		HashMap<Character,Integer> s =new HashMap();
+		HashMap<Character,Integer> t =new HashMap();
+		for(int i=0;i<test.length();i++)
+		{
+			if(!s.containsKey(test.charAt(i)))
+			{
+				s.put(test.charAt(i), 1);
+			}
+			else
+			{
+				s.put(test.charAt(i), s.get(test.charAt(i))+1);
+			}
+		}
+		for(int i=0;i<test1.length();i++)
+		{
+			if(!t.containsKey(test1.charAt(i)))
+			{
+				t.put(test1.charAt(i), 1);
+			}
+			else
+			{
+				t.put(test1.charAt(i), t.get(test1.charAt(i))+1);
+			}
+		}
+		int count=0;
+		for(Map.Entry<Character, Integer> entry: t.entrySet())
+		{
+			Character word=entry.getKey();
+			if(!s.containsKey(word)||s.get(word)<entry.getValue())
+			{
+				count=1;
+				
+			}
+			
+			
+		}
+		if(count==1)
+			System.out.println("NO");
+		else 
+			System.out.println("YES");
+		
+	}
+
+}

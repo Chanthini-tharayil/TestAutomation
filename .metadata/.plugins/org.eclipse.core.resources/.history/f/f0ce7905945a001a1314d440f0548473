@@ -1,0 +1,31 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+public class Assignment {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:\\Work\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://cleartrip.com");
+		// Thread.sleep(6000);
+		// driver.switchTo().alert().accept();
+		driver.findElement(By.id("DepartDate")).click();
+		driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active ")).click();
+		Select s = new Select(driver.findElement(By.id("Adults")));
+		s.selectByValue("2");
+		Select sa = new Select(driver.findElement(By.id("Childrens")));
+		sa.selectByValue("1");
+		driver.findElement(By.id("MoreOptionsLink")).click();
+		driver.findElement(By.id("AirlineAutocomplete")).sendKeys("indigo");
+		driver.findElement(By.id("SearchBtn")).click();
+		System.out.println(driver.findElement(By.id("homeErrorMessage")).getText());
+		Assert.assertEquals(driver.findElement(By.id("homeErrorMessage")).getText(),
+				"Sorry, but we can't continue until you fix everything that's marked in RED");
+		driver.close();
+	}
+
+}

@@ -1,0 +1,29 @@
+package prepstring1;
+
+public class movetofront {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="geeks for geeks";
+		char c[]=s.toCharArray();
+		int j=0;
+		char temp=' ';
+		//StringBuilder s1=new StringBuilder();
+		for(int i=0;i<c.length;i++)
+		{
+			if(c[i]==' ')
+			{
+				temp=c[j];
+				c[j]=c[i];
+				c[i]=temp;
+				j++;
+				
+			}
+		}
+		for(int i=0;i<c.length;i++)
+		{
+			System.out.println(c[i]);
+		}
+	}
+
+}

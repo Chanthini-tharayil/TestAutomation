@@ -1,0 +1,29 @@
+package prepstring1;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class allstringhavesamefreq {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="abbca";
+HashMap<Character,Integer> m= new HashMap<Character,Integer>();
+for(int i=0;i<s.length();i++)
+{
+	if(!m.containsKey(s.charAt(i)))
+		m.put(s.charAt(i), 1);
+	else
+		m.put(s.charAt(i), m.get(s.charAt(i))+1);
+}
+int test=0,value=0;
+for(Map.Entry<Character, Integer> entry:m.entrySet())
+{
+	value=entry.getValue();
+	if(entry.getValue()!=value)
+		test++;
+}
+System.out.println(test);
+	}
+
+}

@@ -1,0 +1,29 @@
+package restAssured;
+
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import static io.restassured.RestAssured.given;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class firsttest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Response response=given().when().
+				get("http://dummy.restapiexample.com/api/v1/employees");
+			//	System.out.println(response.asString());
+				List<HashMap<String,String>> l = null;
+				JsonPath jsonpath =new JsonPath(response.asString());
+			   l= jsonpath.get("data");
+			   System.out.println(l.get(0));
+			   List<String> employeename = new ArrayList<String>();
+			   employeename =jsonpath.get("employee_name");
+			   System.out.println(employeename);
+			   
+	}
+
+}

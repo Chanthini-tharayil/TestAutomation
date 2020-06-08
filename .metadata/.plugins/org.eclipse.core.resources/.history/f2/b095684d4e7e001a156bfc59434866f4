@@ -1,0 +1,27 @@
+package prepstring1;
+
+public class maxdistinctlower {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="zACaAbbaazzC";
+		
+		int max=Integer.MIN_VALUE,count=0,i=0,j=0;
+		while(j<s.length())
+		{
+			if(Character.isUpperCase(s.charAt(j))==true)
+			{
+				j++;
+			}
+			else
+			{
+				count++;
+				j++;
+			}
+			if(max<count)
+				max=count;
+		}
+System.out.println(max);
+	}
+
+}

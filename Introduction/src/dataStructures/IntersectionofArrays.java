@@ -1,0 +1,38 @@
+package dataStructures;
+
+import java.util.ArrayList;
+
+public class IntersectionofArrays {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> ar1 = new ArrayList<Integer>();
+		ArrayList<Integer> ar2 = new ArrayList<Integer>();
+		ArrayList<Integer> ar3 = new ArrayList<Integer>();
+		// TODO Auto-generated method stub
+		 int i = 0; 
+	       int j = 0; 
+	       
+	    ar1.add(2);ar1.add(3);ar1.add(1);ar1.add(7);ar1.add(8);
+	   	ar2.add(5);ar2.add(9);ar2.add(4);ar2.add(1); 
+	 
+	        ArrayList<Integer> collector = new ArrayList<>();
+           ar1.sort(null);ar2.sort(null);
+           int m = ar1.size();
+           int n = ar2.size();
+           System.out.println(ar1);System.out.println(ar2);
+	        // O(n + m)
+	        while (i < m && j < n) {
+	            if (ar1.get(i) < ar2.get(j)) {
+	                i++;
+	            } else if (ar1.get(i)>ar2.get(j)) {
+	                j++;
+	            } else { // equal
+	                collector.add(ar1.get(i));
+	                i++;j++;
+	            }
+	        }
+	        System.out.println(collector);
+}
+
+}

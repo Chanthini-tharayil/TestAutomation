@@ -1,0 +1,29 @@
+package Hackerrank;
+
+public class cloudjumping {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] c= {0,0,0,1,1,0,0};
+		
+		int count=0,i=0;
+	while (i<c.length)
+	{
+		if(c[i]==0 )
+		{
+			
+			i=i+1;
+			
+			if(c[i]==0 && i<c.length)
+			{
+				count++;
+				i=i-1;
+			}
+		}
+		i++;
+	}
+		System.out.println(count);
+
+	}
+
+}

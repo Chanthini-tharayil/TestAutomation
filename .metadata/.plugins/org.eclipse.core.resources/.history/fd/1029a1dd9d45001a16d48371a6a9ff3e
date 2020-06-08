@@ -1,0 +1,21 @@
+package dataStructures;
+
+public class Arraystest {
+	
+	public static void main(String[] args) {
+		
+		int[] array=new int[10];
+		array[0]=1;
+		array[1]=2;
+		array[2]=3;
+		array[3]=4;
+		int index=2;
+		int size=array.length;
+		/*for(int i=size-1;i<index;i--)
+		{
+			array[i]
+		}*/
+		System.out.println(size);
+	}
+
+}

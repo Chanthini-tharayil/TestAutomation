@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;prepstring1.removeconsecvowels&apos; to &apos;removeconsecimp&apos;&#x0D;&#x0A;- Original project: &apos;Introduction&apos;&#x0D;&#x0A;- Original element: &apos;prepstring1.removeconsecvowels&apos;&#x0D;&#x0A;- Renamed element: &apos;prepstring1.removeconsecimp&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;removeconsecvowels&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;prepstring1{removeconsecvowels.java[removeconsecvowels" matchStrategy="1" name="removeconsecimp" qualified="false" references="true" similarDeclarations="false" stamp="1586708445884" textual="false" version="1.0"/>
+</session>

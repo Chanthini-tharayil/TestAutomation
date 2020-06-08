@@ -1,0 +1,35 @@
+package Hackerrank;
+
+public class Occurence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+		String s="abab";
+		 long n=20;
+		 int count=0;
+		
+		 StringBuilder s1= new StringBuilder();
+	        for(int i=0;i<n;)
+	        {
+	            s1.append(s);
+	        }
+	        System.out.println(s1);
+	        String test=s1.toString();
+	       
+	        for(int i=0;i<n;i++)
+	        {
+	            if(test.charAt(i)=='a')
+	            count++;
+	        }
+		 
+	        System.out.println(count);
+		}
+		 catch(OutOfMemoryError e)
+        {
+        System.out.println("nothing");
+        }
+
+	}
+
+}

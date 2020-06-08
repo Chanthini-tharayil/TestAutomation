@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class dynamicdropdown {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C://chrome//chromedriver.exe");
+		WebDriver driver =new ChromeDriver();
+		driver.get("http://www.qaclickacademy.com");
+		driver.findElement(By.xpath("//ul[@class='nav navbar-nav navbar-right']/li[5]/a")).click();
+        WebDriverWait w= new WebDriverWait(driver,20);
+        w.until(ExpectedConditions.visibilityOfElementLocated(By.id("autocomplete"))).sendKeys("in");
+        List<WebElement> e=driver.findElements(By.className("ui-menu-item"));
+        System.out.println(e.size());
+        for(int i=0;i<e.size();i++)
+        {
+        	System.out.println(e.get(i));
+        	WebElement r=e.get(i).findElement(By.className("ui-menu-item-wrapper"));
+        	System.out.println(r.getText());
+        	if(e.get(i).getText()=="India")
+        	{
+        		e.get(i).click();
+        	}
+        }
+        //driver.close();
+	}
+	        
+	}
+
+

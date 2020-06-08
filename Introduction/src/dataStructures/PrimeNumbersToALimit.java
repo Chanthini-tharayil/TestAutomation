@@ -1,0 +1,64 @@
+package dataStructures;
+
+public class PrimeNumbersToALimit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Sieve Of Erathosthenes MOST TIME EFFICIENT
+		
+		int n =7;
+		 // finally be false if i is Not a prime, else true. 
+        boolean prime[] = new boolean[n+1]; 
+        for(int i=0;i<n;i++) 
+            prime[i] = true; 
+          
+        for(int p = 2; p*p <=n; p++) 
+        { 
+            // If prime[p] is not changed, then it is a prime 
+            if(prime[p] == true) 
+            { 
+                // Update all multiples of p 
+                for(int i = p*2; i <= n; i =i+ p) 
+                    prime[i] = false; 
+            } 
+        } 
+        System.out.println(prime[n]);
+          
+        // Print all prime numbers 
+        for(int i = 2; i <= n; i++) 
+        { 
+            if(prime[i] == true) 
+                System.out.print(i + " "); 
+        } 
+        
+        //SIMPLE PGM TO PRINT PRIME NUMBERS:
+        
+        int i =0;
+        int num =0;
+        //Empty String
+        String  primeNumbers = "";
+         int n1 = 100;
+        for (i = 1; i <= n1; i++)  	   
+        { 		 		  
+           int counter=0; 		  
+           for(num =i; num>=1; num--)
+           {
+  	    if(i%num==0)
+  	    {
+  		counter = counter + 1;
+  	    }
+  	 }
+           //ALL prime numbers are divisible by itself and 1
+  	 if (counter ==2)
+  	{
+ 	    //Appended the Prime number to the String
+ 	    primeNumbers = primeNumbers + i + " ";
+ 	 }	
+       }	
+       System.out.println("Prime numbers from 1 to n are :");
+       System.out.println(primeNumbers);
+
+	}
+
+}

@@ -1,0 +1,45 @@
+package dataStructures;
+
+import dataStructures.Linkedlist.Node;
+
+public class reversesumlinkedlist {
+	  static class Node {
+	        int data;
+	        Node next;
+
+	         Node(int d) {
+	            data = d;
+	            next=null;
+	        }
+	    }
+	  
+	  static Node head;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		   Node newNode = new Node(2);
+    	   Node secNode = new Node(3);
+    	   Node thirdNode = new Node(4);
+    	   if (head == null) {
+               head = newNode;
+               System.out.println("in this box");
+               
+           }
+           else
+           {
+        	   head.next=newNode;
+           }
+           newNode.next=secNode;
+           secNode.next=thirdNode;
+           
+           Node current=head;
+           System.out.println("Printing first list:");
+           while(current!=null)
+           {
+            System.out.println(current.data);
+            current=current.next;
+           }
+		
+	}
+
+}

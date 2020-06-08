@@ -1,0 +1,28 @@
+package prep1;
+
+import java.util.LinkedHashSet;
+
+public class continoususbaaray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a="aaabcbb";
+		StringBuilder s=new StringBuilder();
+		for(int i=1;i<a.length();i++)
+		{
+			if(a.charAt(i)==a.charAt(i-1))
+				continue;
+			else
+				s.append(a.charAt(i));
+		}
+		System.out.println(s.toString());
+		LinkedHashSet<Character> hs = new LinkedHashSet<Character>();	
+		for(int i=1;i<a.length();i++)
+		{
+			hs.add(a.charAt(i));
+		}
+		System.out.println(hs);
+	
+	}
+
+}

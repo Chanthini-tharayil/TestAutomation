@@ -1,0 +1,36 @@
+package prepstring1;
+
+public class rearrangestring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String test ="aaabc";
+		char[] c=test.toCharArray();
+		char temp=' ';
+		int i=0,j=0;
+		while(i<c.length && j<c.length)
+		{
+			if(c[i]==c[i+1])
+			{
+				while(c[j]!=c[i])
+				{
+					j++;
+					
+				}
+				temp=c[i];
+				c[i]=c[j];
+				c[j]=temp;
+				i++;
+				j=i;
+				
+			}
+			else
+				i++;
+		}
+		for(int k=0;k<c.length;k++)
+			System.out.println(c[k]);
+		
+
+	}
+
+}

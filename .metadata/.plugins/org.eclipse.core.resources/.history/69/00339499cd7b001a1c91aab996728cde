@@ -1,0 +1,31 @@
+package prep1;
+
+import java.util.Arrays;
+
+public class findpair {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[] = {1, 4, 3, 4, 9, 11, 8};
+		int d = 7, n =7;
+	  Arrays.sort(a);
+	  int i=0,j=1,sum=0;
+	  while(i<a.length &&j<a.length)
+	  {
+		  if(a[j]+a[i]==d)
+		  {
+			  System.out.println(a[i]+" "+a[j]);
+			  i++;j++;
+		  }
+		  else if(a[j]+a[i]>d)
+		  {
+			  i++;
+		  }
+		  else if(a[j]+a[i]<d)
+		  {
+			  j++;
+		  }
+	  }
+	}
+
+}

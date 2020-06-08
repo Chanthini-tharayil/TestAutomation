@@ -1,0 +1,29 @@
+package Hackerrank;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class array {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a= {1 ,2, 3 ,4, 5};
+		int d=2;
+	       int len=a.length;
+	      System.out.println(len);
+	       for(int i=0;i<=d;i++)
+	       {
+	           int temp=a[i];
+	           a[i]=a[i+1];
+	           a[len-1-i]=temp;
+
+	       }
+
+		
+for(int i=0;i<a.length;i++)
+{
+	System.out.println(a[i]);
+}
+	}
+
+}

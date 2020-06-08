@@ -1,0 +1,43 @@
+package Hackerrank;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CountinArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> a = new ArrayList<Integer>();
+		List<Integer> b = new ArrayList<Integer>();
+		a.add(10);a.add(20);a.add(2);
+		b.add(2);b.add(17);b.add(1);
+		int count=0,count1=0;;
+		list.add(count);list.add(count1);
+		if(a.size()==b.size())
+		{
+		        for(int i=0;i<a.size();i++)
+		        {
+		            if(a.get(i)<b.get(i))
+		            {
+		                
+		                list.add(count++);
+		            }
+		        }
+		        
+		         for(int i=0;i<a.size();i++)
+		        {
+		            if(a.get(i)>b.get(i))
+		            {
+		                
+		               list.set(count1, count1++);
+		            }
+		        }
+		}
+		for(int i=0;i<list.size();i++)
+			System.out.println(list.get(i));
+
+	}
+
+}

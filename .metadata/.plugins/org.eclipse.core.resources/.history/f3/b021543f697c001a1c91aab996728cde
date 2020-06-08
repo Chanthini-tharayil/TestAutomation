@@ -1,0 +1,24 @@
+package prep1;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public class sortabsolutediff {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[] = {10, 5, 3, 9, 2};
+		int x = 7;
+		TreeMap<Integer,Integer> m = new TreeMap<Integer,Integer>();
+		for(int i=0;i<a.length;i++)
+		{
+			m.put(a[i], Math.abs(x-a[i]));
+		}
+		for(Map.Entry<Integer, Integer> entry: m.entrySet())
+		{
+			System.out.println(entry.getKey());
+		}
+
+	}
+
+}

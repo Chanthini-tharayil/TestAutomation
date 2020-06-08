@@ -1,0 +1,16 @@
+package dataStructures;
+
+public class ReverseandMismatchCheck {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String a="test";
+		String test="";
+		for(int i=a.length();i<0;i++)
+			test+=a.charAt(i);
+		System.out.println(test);
+			
+	}
+
+}

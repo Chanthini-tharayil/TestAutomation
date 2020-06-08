@@ -1,0 +1,37 @@
+package dataStructures;
+
+public class Removeduplicates {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// STUDY THE ONE WITH LINKEDLIST 
+    String str="aabbcb";
+    int count=0;
+    String str1=null;
+   // for(int i=0;str.charAt(i)!='\0';i++)
+    //	count++;
+    char[] c= new char[6];
+    c=str.toCharArray();
+    String test=null;
+    for(int i=0;i<c.length;i++)
+    {
+    	//char ch=str.charAt(i);
+    	for(int j=i+1;i<c.length;i++)
+    	{
+    		if(str.charAt(i)==str.charAt(j))
+    		{
+    			
+    			test+=c[i];
+    			break;
+    					
+    		}
+    		else
+    			test+=c[i];
+    			
+    			
+    	}
+    }
+    System.out.println(test);
+    
+	}
+}

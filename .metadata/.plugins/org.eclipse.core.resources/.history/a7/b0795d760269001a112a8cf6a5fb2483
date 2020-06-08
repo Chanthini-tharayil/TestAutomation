@@ -1,0 +1,29 @@
+package search;
+
+public class binarysearch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 int arr[] = { 2, 3, 4, 10, 40 }; 
+		 int len=arr.length-1;
+		 int x=10;
+		 int r=0;
+		 
+		 while(r<=len)
+		 {
+			 int mid=r+(len-r)/2;
+			 if(arr[mid]==x)
+				 System.out.println(mid);
+			 else if(arr[mid]>x)
+			 {
+				 len=mid-1;
+			 }
+			 else
+				 r=mid+1;
+		 }
+		 
+		 
+	}
+	
+
+}

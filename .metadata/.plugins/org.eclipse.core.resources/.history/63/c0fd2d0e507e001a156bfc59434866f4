@@ -1,0 +1,36 @@
+package prepstring1;
+
+public class maxdistinctlower {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="zACaAbbaazzC";
+		String q="";
+		
+		int max=Integer.MIN_VALUE,count=0,i=0,j=0;
+		StringBuilder s1=new StringBuilder();
+		while(j<s.length())
+		{
+			if(Character.isUpperCase(s.charAt(j))==false)
+			{
+				j++;
+				count++;
+				s1.append(s.charAt(j));
+			}
+			else
+			{
+				//count++;
+				j++;
+				count=0;
+				s1.delete(0,j);
+			}
+			if(max<count)
+			{
+				max=count;
+				q=s1.toString();
+			}
+		}
+System.out.println(max+" "+q);
+	}
+
+}

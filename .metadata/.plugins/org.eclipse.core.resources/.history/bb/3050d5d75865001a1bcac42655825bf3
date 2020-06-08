@@ -1,0 +1,41 @@
+package Hackerrank;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class array {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a= {1 ,2, 3 ,4, 5};
+		int d=2;
+		int[] b=new int[a.length];int index=0;
+		List<Integer> w =new ArrayList<Integer>();
+		for(int i=0;i<a.length;i++)
+		{
+		    if(i==d)
+		    {
+		        for(int j=i;j<a.length;j++)
+		        {
+		            b[index]=a[j];
+		            index++;
+		        }
+		    }
+		    else if(i<d)
+		    {
+		    	w.add(a[i]);
+		    }
+		    
+		}
+		for(int i=0;i<w.size();i++)
+		{
+		    b[index]=w.get(i);
+		    index++;
+		}
+for(int i=0;i<b.length;i++)
+{
+	System.out.println(b[i]);
+}
+	}
+
+}

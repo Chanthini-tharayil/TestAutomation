@@ -1,0 +1,32 @@
+package crackingTheCodingInterview;
+
+import java.util.HashSet;
+
+public class OneAway {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+  String s="pale";
+  String h="perle";
+  HashSet f= new HashSet();
+  
+  for(int i=0;i<s.length();i++)
+  {
+	  f.add(i);
+  }
+  int count=0;
+  for( int i=0;i<h.length();i++)
+  {
+	  if(!f.contains(i))
+		  count++;
+  }
+  if(count>1)
+  {
+	  System.out.println("Not one Away");
+  }
+  else
+	  System.out.println("One Away");
+
+	}
+
+}

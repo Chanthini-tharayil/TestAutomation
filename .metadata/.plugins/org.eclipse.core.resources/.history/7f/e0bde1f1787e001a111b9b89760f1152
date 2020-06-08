@@ -1,0 +1,10 @@
+package prep1;
+
+public class smallestsubarray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

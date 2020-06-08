@@ -1,0 +1,16 @@
+package restAssured;
+
+import io.restassured.path.json.JsonPath;
+
+public class thirdtest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String a= "[1,2,3]";
+		JsonPath jsonpath = new JsonPath(a);
+		System.out.println(jsonpath.get());
+	
+	}
+
+}

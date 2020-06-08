@@ -1,0 +1,46 @@
+package Careercup;
+
+public class MaxCOnsecutiveOnes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a= {0,0,1,1,1,0,0,1,1,0};
+		Boolean isStart=false;
+		Boolean isEnd=false;
+		//Boolean isConsec=true;
+		int[] c=new int[a.length];
+		int j=0;
+		int count=0;
+		for( int i=0;i<a.length;i++)
+		{
+			if(a[i]==1&& isStart==false)
+			{
+				isStart=true;
+			    count++;
+			}
+			else if(a[i]==1 &&isStart==true &&isEnd==false)
+			{
+				count++;
+			}
+			else if(a[i]!=1 && isStart==true)
+			{
+				isEnd=true;
+				c[j]=count;
+				count=0;
+				j++;
+				
+			}
+			else if(a[i]==1 && isEnd==true)
+			{
+				isStart=true;isEnd=false;
+				count++;
+			}
+		
+
+	
+	}
+		for(int i=0;i<c.length;i++)
+			System.out.println(c[i]);
+
+}
+}

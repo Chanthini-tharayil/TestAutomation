@@ -1,0 +1,33 @@
+package prep;
+
+public class ArrayRotation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[] = {1, 2, 3, 4, 5, 6, 7};
+		int d=2,count=1;
+		int temparray[]=new int[d];
+		for(int j=0;j<d;j++)
+		{
+			temparray[j]=a[j];
+		}
+		int i=0;
+		while(i<a.length && d<a.length)
+		{
+			a[i]=a[d];
+			d++;
+			count++;
+			i++;
+		}
+		for(int j=0;j<d;j++)
+		{
+			a[count]=temparray[j];
+			count++;
+		}
+		for(int j=0;j<a.length;j++)
+		{
+			System.out.println(a[j]);
+		}
+	}
+
+}

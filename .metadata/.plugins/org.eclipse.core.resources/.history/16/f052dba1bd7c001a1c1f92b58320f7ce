@@ -1,0 +1,36 @@
+package prepstring1;
+
+import java.util.Arrays;
+
+public class firstandfinaloccurance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] list = {1,2,3,4,5,5,1,8};
+		int n=1,k=0;
+		Arrays.sort(list);
+		int i=0,j=list.length-1;
+		Boolean isstart=false,isend=false;
+		while(i<list.length &&j>0)
+		{
+			if(list[i]==n && isstart==false)
+			{
+				System.out.println(i);
+				isstart=true;
+			}
+			else if(list[i]!=n && isstart==false)
+				i++;
+			 if(list[j]==n && isend==false)
+			{
+				System.out.println(j);
+				isend=true;
+			}
+			 if(list[j]!=n && isstart==false)
+				j--;
+			
+				
+				
+		}
+	}
+
+}

@@ -1,0 +1,32 @@
+package crackingTheCodingInterview;
+
+public class CompressString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String test ="aaabbccaa";
+		String test1="";
+		int count=0;
+			int i=0,j=0;
+		while(i<test.length()&&j<test.length())
+		{
+			j=i+1;
+			if(test.charAt(i)==test.charAt(j))
+			{
+				count++;
+				j++;
+			}
+			else
+			{
+				test1+=test.charAt(i);
+				test1+=count+1;
+				count=0;
+				i=j;
+			}
+			
+		}
+		System.out.println(test1);
+	}
+
+}

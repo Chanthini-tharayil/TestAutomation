@@ -1,0 +1,32 @@
+package prepstring1;
+
+public class lowercaseanduppercase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="bAwutndekWEdkd";
+		char[] c = new char[s.length()];
+         int [] t= new int[256];
+         for(int i=0;i<s.length();i++)
+        	 t[s.charAt(i)]++;
+	int j=97;
+	for(int i=0;i<t.length;i+=2)
+	{
+		System.out.println((char) t[(j)]);
+		c[i]=(char) t[(j)];
+		j++;
+	}
+	j=65;
+	for(int i=1;i<t.length;i+=2)
+	{
+		c[i]=(char) t[(j)];
+		j++;
+	}
+	for(int i=0;i<c.length;i++)
+	{
+		System.out.println(c[i]);
+	}
+
+
+}
+}

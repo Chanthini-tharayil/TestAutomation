@@ -1,0 +1,26 @@
+package Careercup;
+
+import java.util.HashMap;
+
+public class CharacterCount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+/*Write a program to diplay a character occurred maximum times and if 
+ * two charaters occurring same no of times then display 1st character in string.
+"HELLO WORLD!" display L
+"HO HELLO!" display H (H, L and O appeared 2 times but H is in 1st in string)
+*/
+	String t="HELLO WORLD!";
+	char[] c=t.toCharArray();
+   int[] g =new int[128];
+   for(char m: c)
+   {
+	   g[m]++;
+   }
+   for(int i=0;i<g.length;i++)
+   System.out.println(g[i]);
+	
+	}
+
+}

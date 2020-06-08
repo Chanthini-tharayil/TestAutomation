@@ -1,0 +1,20 @@
+package Hackerrank;
+
+public class staircase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=4;
+		StringBuilder s= new StringBuilder();
+		for(int i=0;i<=n;i++)
+		{
+			for(int j=1;j<i;j++)
+			{
+				s.append("#");
+			}
+			System.out.println(s.toString());
+		}
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package Careercup;
+
+import java.util.HashSet;
+
+public class CompressString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    String test="aabbcc";
+	char[] c= test.toCharArray();
+	HashSet<Character> h= new HashSet();
+	for(char i: c)
+		h.add(i);
+	for(char i: c)
+	{
+		System.out.println(h.iterator().equals(i));
+		
+	}
+    
+	}
+
+}

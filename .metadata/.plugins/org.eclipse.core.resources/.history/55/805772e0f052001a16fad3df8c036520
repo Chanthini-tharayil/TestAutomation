@@ -1,0 +1,44 @@
+package crackingTheCodingInterview;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class OneAway {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+  String s="pale";
+  String h="psle";
+  HashMap<Character,Integer> f= new HashMap();
+  int count=0;
+  for(int i=0;i<s.length();i++)
+  {
+	  if(!f.containsKey(s.charAt(i)))
+	  {
+		  f.put(s.charAt(i), 1);
+		}
+	  else
+	  {
+		  f.put(s.charAt(i), f.get(s.charAt(i))+1);
+	  }
+  }
+  if(s.length()==h.length())
+  {
+  for( int i=0;i<h.length();i++)
+  {
+	  if(!f.containsKey(h.charAt(i)))
+	  {
+		  count++;
+	  }
+	
+  }
+  }
+  
+  if(count==1)
+	  System.out.println("One Away");
+ 
+	}
+	
+}

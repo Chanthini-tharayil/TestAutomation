@@ -1,0 +1,47 @@
+package dataStructures;
+
+import java.util.LinkedHashSet;
+
+public class Removeduplicates {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// STUDY THE ONE WITH LINKEDLIST 
+    String str="aabbcb";
+    int count=1;
+    String str1=null;
+   // for(int i=0;str.charAt(i)!='\0';i++)
+    //	count++;
+    char[] c= new char[6];
+    c=str.toCharArray();
+    String test="";
+    for(int i=0;i<str.length();i++)
+    {
+    	for(int j=i+1;j<str.length();j++)
+    	{
+    		if(str.charAt(i)==str.charAt(j))
+    		{
+    			
+    			count++;
+    					
+    		}    		
+    			
+    	}
+    	if(count==1)
+    		test+=str.charAt(i);
+    }
+    System.out.println(test);
+    //*************************************************
+    //USING LINKED HASHSET
+    //***********************************************
+ 
+    /*LinkedHashSet<Character> lhs = new LinkedHashSet<>(); 
+    for(int i=0;i<str.length();i++) 
+        lhs.add(str.charAt(i)); 
+      
+    // print string after deleting duplicate elements 
+    for(Character ch : lhs) 
+        System.out.print(ch); */
+    
+	}
+}

@@ -1,0 +1,21 @@
+package restAssured;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.restassured.path.json.JsonPath;
+
+public class thirdtest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String a= "[1,2,3]";
+		JsonPath jsonpath = new JsonPath(a);
+		List<Integer> i= new ArrayList<Integer>();
+		i=jsonpath.get();
+		System.out.println(i.get(0));
+	
+	}
+
+}

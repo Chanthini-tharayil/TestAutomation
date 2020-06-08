@@ -1,0 +1,19 @@
+package prep1;
+
+public class sumclosestozero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 int a[] = {1, 60, -10, 70, -80, 85};
+		 int sum=Integer.MIN_VALUE,test=0;
+		 for(int i=0;i<a.length-1;i++)
+		 {
+			 test=Math.abs(a[i]-a[i+1]);
+					 if(sum<test)
+						 sum=test;
+		 }
+		 System.out.println(sum);
+
+	}
+
+}

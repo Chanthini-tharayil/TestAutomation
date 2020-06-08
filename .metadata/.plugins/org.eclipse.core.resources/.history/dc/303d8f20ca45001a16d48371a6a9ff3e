@@ -1,0 +1,39 @@
+package dataStructures;
+
+public class Linkedlist {
+	 public class Node {
+	        public Node(int data) {
+	        	this.data = data;
+			// TODO Auto-generated constructor stub
+		}
+			int data;
+	        Node next;
+	 }
+	 private static  Node head;
+
+	 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  addFront(20);
+		
+	}
+	public static void addFront(int data)
+	{
+		Node newNode = new Node(data);
+
+        // if head...
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        // Set it's next to current head
+        newNode.next = head;
+
+        // Set current head equal to this new head
+        head = newNode;
+        System.out.println(head.data);
+	}
+	
+
+}

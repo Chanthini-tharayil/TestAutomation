@@ -1,0 +1,27 @@
+package dataStructures;
+
+import java.util.Arrays;
+
+public class Permutation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str= "abc";
+		String srtg= "bca";
+		char[] t= str.toCharArray();
+		char[] y= srtg.toCharArray();
+		Arrays.sort(t);
+		Arrays.sort(y);
+		if(t.equals(y))
+		{
+			System.out.println("Its a permutation combination");
+		}
+		else
+		{
+			System.out.println("Non permutation combination");
+		}
+		
+
+	}
+
+}

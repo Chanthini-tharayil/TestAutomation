@@ -1,0 +1,45 @@
+package prep;
+
+import java.util.Arrays;
+
+public class evenoddrearrangment {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+/*Given an array of n elements. Our task is to write a program to rearrange the array such 
+ * that elements at even positions are greater than all
+ *  elements before it and elements at odd positions are less than all elements before it.
+ *  Input : arr[] = {1, 2, 3, 4, 5, 6, 7}
+Output : 4 5 3 6 2 7 1
+
+Input : arr[] = {1, 2, 1, 4, 5, 6, 8, 8} 
+Output : 4 5 2 6 1 8 1 8*/
+	
+ 
+		int[] a= {1, 2, 1, 4, 5, 6, 8, 8} ;
+		
+		int[] b=new int[a.length];
+		for(int i=0;i<a.length;i++)
+		{
+			b[i]=a[i];
+		}
+		Arrays.sort(b);
+		int start=0,end=a.length-1;
+		for(int i=a.length-1;i>0;i--)
+		{
+			if(i%2==0)
+			{
+				a[i]=b[end];
+				end--;
+			}
+			else if(i%2==1)
+			{
+				a[i]=b[start];
+				start++;
+			}
+		}
+		for(int i=0;i<a.length;i++)
+			System.out.println(a[i]);
+	}
+
+}

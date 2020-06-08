@@ -1,0 +1,24 @@
+package prepstring1;
+
+import java.util.HashSet;
+
+public class commonchars {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="geeks";
+		String t= "forgeeks";
+		HashSet<Character> m=new HashSet<Character>();
+		for(int i=0;i<s.length();i++)
+		{
+			m.add(s.charAt(i));
+		}
+		for(int i=0;i<t.length();i++)
+		{
+			if(!m.contains(t.charAt(i)))
+				System.out.println(t.charAt(i));
+		}
+
+	}
+
+}

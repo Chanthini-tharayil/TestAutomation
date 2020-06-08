@@ -1,0 +1,24 @@
+package Careercup;
+
+public class ReverseStringFromIntervals {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String test="chanthini";
+		String test1="";
+		int count=0,temp=0;
+		for(int i=0 ,j=i+3;i<test.length();i++)
+		{
+			while(j>=i)
+			{
+				test1+=test.charAt(j);
+				j--;
+				
+			}
+			
+		}
+		System.out.println(test1);
+	}
+
+}

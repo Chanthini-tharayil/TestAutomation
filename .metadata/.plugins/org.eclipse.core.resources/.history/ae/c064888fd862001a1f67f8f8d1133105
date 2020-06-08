@@ -1,0 +1,28 @@
+package Hackerrank;
+
+import java.util.HashSet;
+
+public class cloudjumping {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] c= {0,0,0,1,1,0,0};
+		int count=0;
+		HashSet<Integer> m= new HashSet();
+		for(int i : c)
+		{
+			if(i==0 &&i+1==0 && m.contains(i))
+			{
+				count++;
+				m.add(i);
+			}
+			
+			else 
+				m.add(i);
+			
+		}
+	System.out.println(count);
+
+	}
+
+}

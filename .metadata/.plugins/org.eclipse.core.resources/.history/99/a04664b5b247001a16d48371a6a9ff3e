@@ -1,0 +1,27 @@
+package dataStructures;
+
+public class RepeatingcharNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str="ababab";
+		int length =str.length();
+		char[] c=str.toCharArray();
+		char[] m= new char[4];
+		for(int i=0;i<length;i++)
+		{
+			int count=0;
+			for(int j=i;j<length;j++)
+			{
+				if(c[i]==c[j])
+				{
+					count++;
+				}
+			}
+			System.out.println(c[i] +count);
+			
+		}
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package Careercup;
+
+public class ReverseStringFromIntervals {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String s[] = "i like this program very much".split(" "); 
+        String ans = ""; 
+        String ans1 = ""; 
+        for (int i = s.length - 1; i >= 0; i--) { 
+            ans += s[i] + " "; 
+        } 
+        System.out.println("Reversed String:"); 
+        System.out.println(ans); 
+	
+	
+	String test[]="chanthini".split("",2);
+	for (int i = 0; i <=test.length; i++) { 
+        System.out.println(test[i]); 
+    } 
+	 for (int i = test.length - 1; i >= 0; i--) { 
+         ans1 += test[i] + " "; 
+     } 
+	 System.out.println(ans1);
+	
+}}

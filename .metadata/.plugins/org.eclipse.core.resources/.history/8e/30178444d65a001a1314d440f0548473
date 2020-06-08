@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
+public class Count {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 List<Integer> A = new ArrayList<>();
+
+	         A.add(0); A.add(1); A.add(2);A.add(2);A.add(2);A.add
+	        
+	     HashMap<Integer, Integer> elecount = new HashMap<Integer, Integer>();
+	     for(int m : A)
+	     {
+	    	 if(!elecount.containsKey(2))
+	    	 {
+	    		 elecount.put(m, 1);
+	    	 }
+	    	 else
+	    	 {
+	    		 elecount.put(m, elecount.get(m)+1);
+	    	 }
+	    		    
+	                     
+	                   
+	               }
+	     int count=0;
+	     for(Map.Entry<Integer, Integer> entry: elecount.entrySet())
+			{
+	    	 
+	    	 if(entry.getKey()==2)
+	    		 count=entry.getValue();
+			}
+	     System.out.println(count);
+	    
+	          
+	}
+
+}

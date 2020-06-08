@@ -1,0 +1,32 @@
+package Hackerrank;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class choclatecount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Integer> s= new ArrayList<Integer>();
+		int d=3;
+		int m=2;
+		s.add(1);s.add(2);s.add(1);s.add(3);s.add(2);
+		int sum=0,count=0,k=0;
+        for(int i=0;i<s.size();i++)
+        {
+            while(k<m)
+            {
+            	int j=i;
+              sum+=s.get(j);
+              if(sum==d)
+              {
+                  count++;
+              }
+              j++;k++;
+            }
+        }
+        System.out.println(count);
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package Careercup;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class CompressString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    String test="aabbcc";
+	char[] c= test.toCharArray();
+	HashMap<Character,Integer> m =new HashMap();
+	int count=1;
+	for(char i: c)
+	{
+		if(!m.containsKey(i))
+		{
+			m.put(i, count);
+		}
+		else
+		{
+			m.replace(i, count+1);
+		}
+	}
+	System.out.println(m);
+    
+	}
+
+}

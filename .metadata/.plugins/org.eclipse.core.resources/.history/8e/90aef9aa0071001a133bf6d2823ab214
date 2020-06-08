@@ -1,0 +1,57 @@
+package restAssured;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import io.restassured.path.json.JsonPath;
+
+public class thirdtest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String a= "[1,2,3]";
+		JsonPath jsonpath = new JsonPath(a);
+		List<Integer> i= new ArrayList<Integer>();
+		i=jsonpath.get();
+		System.out.println(i.get(0));
+		
+		String b="[\r\n" + 
+				"	{\r\n" + 
+				"		color: \"red\",\r\n" + 
+				"		value: \"#f00\"\r\n" + 
+				"	},\r\n" + 
+				"	{\r\n" + 
+				"		color: \"green\",\r\n" + 
+				"		value: \"#0f0\"\r\n" + 
+				"	},\r\n" + 
+				"	{\r\n" + 
+				"		color: \"blue\",\r\n" + 
+				"		value: \"#00f\"\r\n" + 
+				"	},\r\n" + 
+				"	{\r\n" + 
+				"		color: \"cyan\",\r\n" + 
+				"		value: \"#0ff\"\r\n" + 
+				"	},\r\n" + 
+				"	{\r\n" + 
+				"		color: \"magenta\",\r\n" + 
+				"		value: \"#f0f\"\r\n" + 
+				"	},\r\n" + 
+				"	{\r\n" + 
+				"		color: \"yellow\",\r\n" + 
+				"		value: \"#ff0\"\r\n" + 
+				"	},\r\n" + 
+				"	{\r\n" + 
+				"		color: \"black\",\r\n" + 
+				"		value: \"#000\"\r\n" + 
+				"	}\r\n" + 
+				"]";
+		JsonPath jsonpath1 = new JsonPath(b);
+		List<HashMap<String,String>> l=null;
+		l=jsonpath1.get("color");
+		System.out.println(l.get(0));
+	
+	}
+
+}

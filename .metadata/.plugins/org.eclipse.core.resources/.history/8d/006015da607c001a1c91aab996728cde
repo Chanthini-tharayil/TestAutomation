@@ -1,0 +1,27 @@
+package prep1;
+
+public class findmindist {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[] = {3, 5, 4, 2, 6, 5, 6, 6, 5, 4,  3};
+		int x = 3, y = 6;
+		int i=0,j=1,dist=0;
+		while(i<a.length &&j<a.length)
+		{
+			if(a[i]==x && a[j]==y|| a[j]==x && a[i]==y)
+			{
+				dist=Math.abs(j-i);
+				i=j;j++;
+				System.out.println(dist);
+			}
+			else if(a[i]==x && a[j]!=y)
+				j++;
+			else if(a[i]==y && a[j]!=x)
+				j++;
+			
+		}
+		
+	}
+
+}

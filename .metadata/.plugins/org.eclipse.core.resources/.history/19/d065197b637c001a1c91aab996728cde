@@ -1,0 +1,61 @@
+package prep1;
+
+public class findmindist {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[] = {3, 5, 4, 2, 6, 5, 6, 5, 4,  3};
+		int X = 3, Y = 6;
+		int N=arr.length;
+		int i=0,j=1,min_dist=Integer.MAX_VALUE;
+		while(i < N && j < N)
+		{
+			if(arr[i] == X) //if we get X
+				{
+					while( j < N && arr[j] != Y) // we simply loop till we get Y
+						j++;	
+					if(j < N && arr[j] == Y)
+					min_dist = Math.min(min_dist,Math.abs(i-j));//we update the minimum distance if required
+					
+					i = j; // important step because as we got X,Y pair we can stand at present position and loop forward for another pair
+				}
+			else if(arr[i] == Y)
+			{
+					while( j < N && arr[j] != X)
+						j++;
+						
+					if(j < N && arr[j] == X)
+					min_dist = Math.min(min_dist,Math.abs(i-j));
+				i = j;
+			}
+			else
+			 i++;
+		}
+		//System.out.println(min_dist);
+		
+		 int pos1 = Integer.MAX_VALUE;
+		    int pos2 = Integer.MAX_VALUE;
+		    int distance = arr.length+1;
+		    int newDistance=0;
+		    pos1 = pos2 = distance = arr.length;
+		 
+		    for (int k = 0; k < arr.length; k++)
+		    {
+		        if (arr[k] == X)
+		            pos1 = k;
+		        else if (arr[k] == Y)
+		            pos2 = k;
+		 
+		      
+		            newDistance = Math.abs(pos1 - pos2);
+		            if (distance > newDistance)
+		                distance = newDistance;
+		        
+		    }
+		    System.out.println(distance);
+		 
+
+		
+	}
+
+}

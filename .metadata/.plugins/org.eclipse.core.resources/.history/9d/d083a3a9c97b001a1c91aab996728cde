@@ -1,0 +1,30 @@
+package prep1;
+
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+
+public class findpair {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[] = {1, 4, 3, 9, 11, 8};
+		int d = 1, n =7;
+		//a[i]+a[j]=sum   a[j]=sum-a[i]
+	 LinkedHashSet<Integer> m= new LinkedHashSet<Integer>();
+	 int diff=0;
+	 for(int i=0;i<a.length;i++)
+	 {
+		 diff=Math.abs(d-a[i]);
+		 if(!m.contains(diff))
+				 {
+			 m.add(a[i]);
+				 }
+		 else
+		 {
+			 System.out.println(a[i]+" "+diff);
+		 }
+	 }
+	 
+	}
+
+}

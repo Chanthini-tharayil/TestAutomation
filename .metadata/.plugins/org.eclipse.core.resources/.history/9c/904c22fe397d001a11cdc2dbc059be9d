@@ -1,0 +1,36 @@
+package prepstring1;
+
+public class removeextraspaces {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="   Hello Geeks  Welcome   to  GeeksforGeeks  ";
+      Boolean isstart=false,isend=false;
+      StringBuilder s1= new StringBuilder();
+      int i=0;
+      while(i<s.length())
+      {
+    	  if(s.charAt(i)==' ' && isstart==false)
+    	  {
+    		  s1.append(s.charAt(i));i++;
+    		  isstart=true;
+    	  }
+    	  else if(s.charAt(i)==' '&& isstart==true)
+    	  {
+    		  i++;
+    	  }
+    	  else if(s.charAt(i)!=' ' && isstart==true)
+    	  {
+    		  s1.append(s.charAt(i));
+    		  i++;
+    		  isstart=false;
+    	  }
+    	  if(s.charAt(i)!=' ' && isstart==false)
+    	  {
+    		  s1.append(s.charAt(i));i++;
+    	  }
+      }
+      System.out.println(s1.toString());
+	}
+
+}

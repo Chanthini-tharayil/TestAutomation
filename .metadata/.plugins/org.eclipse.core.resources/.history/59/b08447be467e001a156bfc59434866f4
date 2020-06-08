@@ -1,0 +1,16 @@
+package prepstring1;
+
+public class descendingorder {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String t="alkasingh";
+		int[] a=new int[26];
+		for(int i=0;i<t.length();i++)
+			a[t.charAt(i)-'a']++;
+		for(int i=a.length;i>0;i--)
+			System.out.println((char)(i+'a'));
+
+	}
+
+}

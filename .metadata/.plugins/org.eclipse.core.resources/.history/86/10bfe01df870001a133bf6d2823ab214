@@ -1,0 +1,29 @@
+package restAssured;
+
+import io.restassured.response.Response;
+import static io.restassured.RestAssured.given;
+
+import java.util.HashMap;
+import java.util.List;
+
+import io.restassured.path.json.JsonPath;
+
+public class secondtest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Response response= given().when().
+				post("http://dummy.restapiexample.com/api/v1/create");
+		JsonPath jsonp= new JsonPath(response.asString());
+		String success= jsonp.getString("status");
+		System.out.println(success);
+		String data =jsonp.getString("data.id");
+		System.out.println(data);
+		HashMap<String,String> l=null;
+			l=	jsonp.get("data");
+		System.out.println(l.get(0));
+
+	}
+
+}

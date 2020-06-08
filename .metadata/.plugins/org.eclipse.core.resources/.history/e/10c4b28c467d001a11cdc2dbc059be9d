@@ -1,0 +1,17 @@
+package prepstring1;
+
+public class palindromechk {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String t="abba";
+String test="";
+for(int i=t.length();i>0;i--)
+{
+	test+=t.charAt(i);
+}
+if(test.equals(t))
+	System.out.println("Palindrome");
+	}
+
+}

@@ -1,0 +1,35 @@
+package prepstring1;
+
+import java.util.Arrays;
+
+public class pangram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Boolean[] b= new Boolean[26];
+		Arrays.fill(b, false);
+		int index=0;
+		String test ="aabbcc";
+		for(int i=0;i<test.length();i++)
+		{
+			index=(int)test.charAt(i)-'a';
+			b[index]=true;
+		}
+		for(int i=0;i<b.length;i++)
+		{
+			if(b[i]==false)
+			{
+			//	System.out.println("Not pangram");
+				break;
+			}
+		}
+		 String str = "Welcome???@@##$ to#$% Geeks%$^for$%^&Geeks"; 
+         
+	        // similar to Matcher.replaceAll 
+	        str = str.replaceAll("[^a-zA-Z]",""); 
+	          
+	        System.out.println(str); 
+
+	}
+
+}
